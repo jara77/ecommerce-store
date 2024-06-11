@@ -8,18 +8,15 @@ import getCategories from "@/actions/get-categories";
 const Navbar = async () => {
   const categories = await getCategories();
 
-  return ( 
+  return (
     <div className="border-b">
-        <div className="relative grid-cols-3 flex h-16 items-center  px-2">
-        <div className="flex justify-start">
-          <Link href="/" className="flex">
-            <p className="font-bold text-xl">El Temach</p>
-          </Link>
-        </div>
+      <div className="grid-cols-3 flex h-16 items-center justify-between px-2">
+        <Link href="/" >
+          <p className="font-bold text-xl">El Temach</p>
+        </Link>
+        <MainNav data={categories} />
+        
         <div className="flex justify-end">
-          <MainNav data={categories} />
-        </div>
-        <div className="flex justify-end ">
           <NavbarActions />
         </div>
       </div>

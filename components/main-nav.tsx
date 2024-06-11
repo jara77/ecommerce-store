@@ -38,20 +38,20 @@ const MainNav: React.FC<MainNavProps> = ({
   return (
     <>
       <nav
-        className="mx-6 flex items-center space-x-4 lg:space-x-6"
+        className="mx-6 flex items-center space-x-4 lg:space-x-6 hidden lg:block"
       >
         {routes.map((route) => (
           <>
-            {/* <Link
+            <Link
               key={route.href}
               href={route.href}
               className={cn(
-                'text-sm font-medium transition-colors hover:text-black sm:hidden',
+                'text-sm font-medium transition-colors hover:text-black',
                 route.active ? 'text-black' : 'text-neutral-500'
               )}
             >
               {route.label}
-            </Link> */}
+            </Link>
           </>
         ))}
       </nav>
@@ -60,7 +60,7 @@ const MainNav: React.FC<MainNavProps> = ({
         <SheetTrigger className="lg:hidden" asChild>
           <Button className="py-2">Menú</Button>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent className="bg-white">
           <SheetHeader>
             <SheetTitle>Categorys</SheetTitle>
           </SheetHeader>
