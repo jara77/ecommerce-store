@@ -10,17 +10,21 @@ const Navbar = async () => {
 
   return ( 
     <div className="border-b">
-      <Container>
-        <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center">
-          <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">
-            <p className="font-bold text-xl">STORE</p>
+        <div className="relative grid-cols-3 flex h-16 items-center  px-2">
+        <div className="flex justify-start">
+          <Link href="/" className="flex">
+            <p className="font-bold text-xl">El Temach</p>
           </Link>
+        </div>
+        <div className="flex justify-end">
           <MainNav data={categories} />
+        </div>
+        <div className="flex justify-end ">
           <NavbarActions />
         </div>
-      </Container>
+      </div>
     </div>
   );
 };
- 
+
 export default Navbar;
