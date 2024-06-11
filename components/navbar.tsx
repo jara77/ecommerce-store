@@ -9,7 +9,7 @@ const Navbar = async () => {
   const categories = await getCategories();
 
   return (
-    <div className="border-b">
+    <div className="border-b fixed top-0 w-full bg-white z-10">
       <div className="grid-cols-3 flex h-16 items-center justify-between px-2">
         <Link href="/" >
           <p className="font-bold text-xl">El Temach</p>
